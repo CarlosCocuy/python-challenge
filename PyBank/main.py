@@ -61,3 +61,10 @@ with open(budgetCSV, 'r') as csvfile:
     print(f'Average  Change: ${average(change)}')
     print(f'Greatest Increase in Profits: {InDate} (${increase})')
     print(f'Greatest Decrease in Profits: {DeDate} (${decrease})')
+
+    out = open('out.txt','w')
+    out.write(f'Total Months: {count}\n')
+    out.write(f'Total: ${total}\n')
+    out.write(f'Average  Change: ${average(change)}\n')
+    out.write(f'Greatest Increase in Profits: {InDate} (${increase})\n')
+    out.write(f'Greatest Decrease in Profits: {DeDate} (${decrease})\n')
